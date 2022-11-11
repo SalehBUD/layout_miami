@@ -1,0 +1,35 @@
+.hours__time {
+  display: grid;
+  row-gap: 16px;
+
+  grid-template-areas:
+    "top top top"
+    "left right right"
+    "bottom bottom bottom";
+
+  &-title {
+    grid-area: top;
+    @include sizeLine(24px, 32px);
+  }
+
+  &-label {
+    @include sizeLine(16px, normal);
+  }
+
+  &-desc {
+    @include sizeLine(16px, normal);
+    font-weight: 400;
+  }
+
+  &-labels {
+    grid-area: left;
+  }
+
+  &-descs {
+    grid-area: right;
+  }
+
+  &-holidays {
+    grid-area: bottom;
+  }
+}

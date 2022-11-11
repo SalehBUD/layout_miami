@@ -1,4 +1,44 @@
-%h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+.page {
+  scroll-behavior: smooth;
+  &__body {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: $main-background;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+}
+
+* {
+  font-family: "Cinzel", "Roboto", sans-serif;
+  color: $text-900;
+  font-weight: 700;
+}
+
+.container {
+  padding: 24px 20px;
+
+  @media (min-width: 744px) {
+    padding: 48px 72px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+    margin: auto;
+    padding: 48px 0;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
 }
