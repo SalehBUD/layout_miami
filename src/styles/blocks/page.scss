@@ -1,0 +1,51 @@
+.page {
+  font-family: 'Roboto', sans-serif;
+
+  &__body {
+    margin: 0;
+    background: #fff;
+  }
+
+  &__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    left: 0;
+
+    transform: translateX(-100%);
+    transition: transform ease-in-out 0.3s;
+
+    &:target {
+      transform: translateX(0);
+    }
+  }
+
+  &__section {
+    margin-bottom: 64px;
+
+    @include onDesktop {
+      margin-bottom: 100px;
+    }
+
+    &-title {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: -1.5px;
+      color: #000;
+      text-align: center;
+
+      &::after {
+        content: '';
+        background-image: url(../images/crown.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: block;
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
