@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 $header-top-padding: 24px;
@@ -13,7 +14,7 @@ $color-main-blue: #0075ff;
 
   &__body {
     margin: 0;
-    background: $c-gray;
+    background: #fff;
   }
 
   &__nav {
@@ -27,6 +28,35 @@ $color-main-blue: #0075ff;
 
     &:target {
       transform: translateX(0);
+    }
+  }
+
+  &__section {
+    margin-bottom: 64px;
+
+    @include onDesktop {
+      margin-bottom: 100px;
+    }
+
+    &-title {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: -1.5px;
+      color: #000;
+      text-align: center;
+
+      &::after {
+        content: '';
+        background-image: url(../images/crown.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: block;
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }
@@ -235,5 +265,74 @@ $color-main-blue: #0075ff;
   @include onDesktop {
     height: 360px;
     padding-bottom: 32px;
+  }
+}
+
+.grid {
+  display: block;
+
+  @include onDesktop {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
+  }
+
+  &__item {
+    @for $start from 1 through 12 {
+      @for $end from $start through 12 {
+        &--#{$start}-#{$end} {
+          grid-column: #{$start} / #{$end + 1};
+        }
+      }
+    }
+  }
+}
+
+.about {
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: -1.5px;
+
+    margin-bottom: 48px;
+
+    color: #000;
+
+    @include onDesktop {
+      font-size: 48px;
+      line-height: 48px;
+      margin: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #0075ff;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0075ff;
+
+    margin-bottom: 16px;
+  }
+
+  &__parag {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #3e3e3e;
+    margin-bottom: 27px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--bold {
+      font-weight: bold;
+    }
   }
 }
