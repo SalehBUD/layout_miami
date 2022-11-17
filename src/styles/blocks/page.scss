@@ -1,5 +1,9 @@
 .page {
   font-family: 'Roboto', sans-serif;
+  color: #3e3e3e;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
 
   &__body {
     margin: 0;
@@ -34,6 +38,13 @@
       letter-spacing: -1.5px;
       color: #000;
       text-align: center;
+      margin-bottom: 28px;
+
+      @include onDesktop {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 56px;
+      }
 
       &::after {
         content: '';

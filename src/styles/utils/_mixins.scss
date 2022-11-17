@@ -22,3 +22,9 @@
     $icon-width: 24px;
   }
 }
+
+@mixin useGrid($colCount, $gap) {
+  display: grid;
+  grid-template-columns: repeat($colCount, 1fr);
+  gap: $gap;
+}
