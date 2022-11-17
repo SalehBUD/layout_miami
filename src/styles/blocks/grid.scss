@@ -1,6 +1,4 @@
 .grid {
-  display: block;
-
   @include onDesktop {
     @include useGrid(12, 24px);
   }
