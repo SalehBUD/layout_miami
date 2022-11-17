@@ -1,0 +1,20 @@
+.contacts {
+  &__info {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: #9fadc2;
+    margin-bottom: 8px;
+  }
+
+  &__data {
+    color: #3e3e3e;
+    text-decoration: none;
+  }
+
+  &__input {
+    margin-bottom: 16px;
+  }
+}
